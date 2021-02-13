@@ -53,8 +53,4 @@ Of course, you can also just use a simple try and except block to handle this er
 ... except KeyError:
 ...   # handle it the way you want
 ```
-
-
-
-
-
+[Back to Homepage](https://anand2312.github.io)
