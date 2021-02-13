@@ -4,7 +4,8 @@ Often you'd be having secrets on your project (like database connection details,
 This can be easily avoided by making use of `.env` files. This short article will guide you through the process of using one to keep your project secrets safe.
 
 ## Step 1: Make the `.env` file.
-In your project folder, make a file simply called `.env` and fill in your secrets as shown in the example.\ 
+In your project folder, make a file simply called `.env` and fill in your secrets as shown in the example.
+
 _Be careful about the file names, it should **NOT** be `.env.txt`_
 ![Example `.env` file](/images/env.png)
 
@@ -16,7 +17,7 @@ pip install -U python-dotenv
 ```
 
 ## Step 3: Use the secrets in your code
-Now to access the secret in your code, you'd first load the `.env`. After this we can access the secrets from the [`os.environ`](https://docs.python.org/3/library/os.html#os.environ) dictionary, which contains the environment variables.
+Now to access the secret in your code, you'd first load the `.env`. After this we can access the secrets from the [`os.environ`](https://docs.python.org/3/library/os.html#os.environ) dictionary (as it is a dictionary, we use the [`dict.get` method](/tutorials/key-errors.md)), which contains the environment variables.
 
 ```py
 import dotenv   # this is the module we installed earlier
