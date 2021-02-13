@@ -2,7 +2,7 @@
 
 Often you'd be having secrets on your project (like database connection details, API access keys etc) that you'd not want to expose to the public by committing it to version control in your source code. 
 This can be easily avoided by making use of `.env` files. This short article will guide you through the process of using one to keep your project secrets safe.
-\
+
 ## Step 1: Make the `.env` file.
 In your project folder, make a file simply called `.env` and fill in your secrets as shown in the example.\ 
 _Be careful about the file names, it should **NOT** be `.env.txt`_
