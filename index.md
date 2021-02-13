@@ -6,6 +6,6 @@ _this site is still a work in progress._\
 \
  Thanks for checking by :D
  
- ## Short Tutorials
+ # Short Tutorials
  - [Handling Project Secrets](tutorials/env-files.md)
  - [Switching to Motor (MongoDB)](tutorials/pymongo-to-motor.md)
