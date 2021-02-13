@@ -8,4 +8,4 @@ _this site is still a work in progress._\
 ## Short Tutorials
  - [Handling Project Secrets](tutorials/env-files.md)
  - [Switching to Motor (MongoDB)](tutorials/pymongo-to-motor.md)
- - [Secret Handling on Github](tutorials/gh-secrets.md)
+ - [Handling KeyErrors](tutorials/key-errors.md)
