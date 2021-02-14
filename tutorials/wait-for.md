@@ -7,7 +7,7 @@ While you are programming your Discord Bot, a common issue that you're going to 
 Enter,
 ## [`commands.Bot.wait_for`](https://discordpy.readthedocs.io/en/stable/ext/commands/api.html#discord.ext.commands.Bot.wait_for)
 Let's see what the documentation says about `wait_for`s:
-> ### `wait\_for(event, *, check=None, timeout=None)`
+> ### `wait_for(event, *, check=None, timeout=None)`
 > This function is a coroutine.
 >
 > Waits for a WebSocket event to be dispatched.
@@ -22,8 +22,10 @@ In this example, we're waiting for the person who invoked the command to send a 
 ```py
 # Step 1: Defining the check function
 # Check functions take the same parameter as the event you're waiting for.
-# For example, if you were waiting for the `on_message` event, your check function would be taking a single parameter of `message`.
-# If you were waiting for the `on_reaction_add` event, your check function would be taking two parameters, `reaction, user`, and so on.
+# For example, if you were waiting for the `on_message` event, your check function would be taking a 
+# single parameter of `message`.
+# If you were waiting for the `on_reaction_add` event, your check function would be taking two parameters,
+# `reaction, user`, and so on.
 # In this check function, we'll have to check that:
 #  - The message is sent in the same channel as the channel where the command was called 
 #  - The message is sent by the same person as the person who called the command
@@ -36,8 +38,8 @@ def check(message: discord.Message) -> bool:
 # For example: 
 #   on_message -> message
 #   on_reaction_add -> reaction_add
-# The wait_for will return the arguments that passed the check function. You can pass in an optional timeout keyword-argument also. When this time is exceeded,
-# `asyncio.TimeoutError` is raised.
+# The wait_for will return the arguments that passed the check function. You can pass in an optional timeout keyword-argument also. 
+# When this time is exceeded, `asyncio.TimeoutError` is raised.
 reply_message = await bot.wait_for("message", check=check)
 await ctx.send(f"You said: {reply_message.content}")
 ```
