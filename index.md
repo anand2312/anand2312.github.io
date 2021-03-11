@@ -13,3 +13,4 @@ _this site is still a work in progress._\
 ## Topical
 ### `discord.py` 
 - [Getting user input](tutorials/wait-for.md)
+- [Custom prefixes](tutorials/custom-prefix.md)
