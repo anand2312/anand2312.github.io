@@ -7,6 +7,7 @@ You will also be needing some kind of persistent storage (preferably a database)
 ## Retrieving the prefix
 Here's the gist of the idea - you make a function which will take two arguments - `bot, message`, and have it return the prefix corresponding to that guild. If there was no prefix saved for that guild, return a default prefix.
 The while you make your instance of `commands.Bot`, you pass this _function_ as the `command_prefix` kwarg.
+
 Pseudocode(ish):
 ```py
 # main.py, where you define your instance of commands.Bot
@@ -24,6 +25,7 @@ def get_prefix(bot: commands.Bot, message: discord.Message) -> str:
 bot = commands.Bot(command_prefix=get_prefix)
 ```
 _Note that you should be doing any clean up yourself, like deleting the data of guilds that your bot is no longer in, too._
+
 You could now implement a command, that will let users edit/set the prefix for their guild (just INSERT/UPDATE data in the database).
 
 You could also implement a cache for the prefixes, so that the bot doesn't query the database each time.
