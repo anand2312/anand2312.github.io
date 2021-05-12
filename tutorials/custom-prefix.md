@@ -6,7 +6,7 @@ You will also be needing some kind of persistent storage (preferably a database)
 
 ## Retrieving the prefix
 Here's the gist of the idea - you make a function which will take two arguments - `bot, message`, and have it return the prefix corresponding to that guild. If there was no prefix saved for that guild, return a default prefix.
-The while you make your instance of `commands.Bot`, you pass this _function_ as the `command_prefix` kwarg.
+While you make your instance of `commands.Bot`, you pass this _function_ as the `command_prefix` kwarg.
 
 Pseudocode(ish):
 ```py
@@ -32,8 +32,6 @@ You could also implement a cache for the prefixes, so that the bot doesn't query
 The cache could be maintained as a _bot variable_.
 
 ```py
-from collections import defaultdict
-
 import discord
 from discord.ext import commands
 
